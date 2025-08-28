@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Salamon | Portfolio</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* Global Styles */
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f9fbfd;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(135deg, #2c3e50, #3498db);
+      color: white;
+      text-align: center;
+      padding: 80px 20px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 3rem;
+      font-weight: 700;
+    }
+
+    header p {
+      margin-top: 10px;
+      font-size: 1.2rem;
+      font-weight: 300;
+    }
+
+    section {
+      max-width: 1000px;
+      margin: auto;
+      padding: 60px 20px;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 40px;
+      color: #2c3e50;
+      font-size: 2rem;
+      position: relative;
+    }
+
+    h2::after {
+      content: '';
+      display: block;
+      width: 80px;
+      height: 4px;
+      background: #3498db;
+      margin: 10px auto 0;
+      border-radius: 2px;
+    }
+
+    /* About Section */
+    .about img {
+      display: block;
+      margin: 0 auto 20px;
+      width: 160px;
+      border-radius: 50%;
+      border: 5px solid #3498db;
+      transition: transform 0.3s ease;
+    }
+
+    .about img:hover {
+      transform: scale(1.05);
+    }
+
+    .about p {
+      text-align: center;
+      font-size: 1.1rem;
+      max-width: 700px;
+      margin: auto;
+    }
+
+    /* Skills */
+    .skills ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    .skills li {
+      padding: 12px 24px;
+      background: #3498db;
+      color: white;
+      border-radius: 30px;
+      font-weight: 500;
+      transition: all 0.3s;
+    }
+
+    .skills li:hover {
+      background: #2c3e50;
+      transform: translateY(-5px);
+    }
+
+    /* Education */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: white;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    }
+
+    th, td {
+      padding: 15px;
+      text-align: center;
+      border-bottom: 1px solid #eee;
+    }
+
+    th {
+      background: #3498db;
+      color: white;
+    }
+
+    tr:hover {
+      background: #f4faff;
+    }
+
+    /* Contact Form */
+    form {
+      display: flex;
+      flex-direction: column;
+      max-width: 500px;
+      margin: auto;
+    }
+
+    input, textarea, button {
+      margin: 10px 0;
+      padding: 12px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+
+    input:focus, textarea:focus {
+      border-color: #3498db;
+      outline: none;
+    }
+
+    button {
+      background: #3498db;
+      color: white;
+      border: none;
+      cursor: pointer;
+      font-weight: 600;
+      transition: background 0.3s, transform 0.2s;
+    }
+
+    button:hover {
+      background: #2c3e50;
+      transform: translateY(-3px);
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      background: #2c3e50;
+      color: white;
+      padding: 20px;
+      margin-top: 40px;
+    }
+
+    footer a {
+      color: #3498db;
+      text-decoration: none;
+      margin: 0 10px;
+      transition: color 0.3s;
+    }
+
+    footer a:hover {
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header Section -->
+  <header>
+    <h1>Salamon</h1>
+    <p>Software Developer | MCA Student | Cybersecurity Enthusiast</p>
+  </header>
+
+  <!-- About Section -->
+  <section class="about">
+    <h2>About Me</h2>
+    <img src="profile.jpg" alt="My Profile Picture">
+    <p>Hello! I'm <strong>Salamon</strong>, a passionate software developer and MCA student. I love building 
+      web applications, exploring cybersecurity, and solving real-world coding challenges.</p>
+  </section>
+
+  <!-- Skills Section -->
+  <section class="skills">
+    <h2>Skills</h2>
+    <ul>
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>C</li>
+      <li>Java</li>
+      <li>PHP</li>
+      <li>JavaScript</li>
+      <li>Cybersecurity</li>
+    </ul>
+  </section>
+
+  <!-- Education Section -->
+  <section class="education">
+    <h2>Education</h2>
+    <table>
+      <tr>
+        <th>Year</th>
+        <th>Course</th>
+        <th>Institution</th>
+      </tr>
+      <tr>
+        <td>2025 - Present</td>
+        <td>MCA</td>
+        <td>Sri Manakula Vinayaga Engineering College</td>
+      </tr>
+      <tr>
+        <td>2022 - 2025</td>
+        <td>UG - Computer Science</td>
+        <td>Indira Gandhi College</td>
+      </tr>
+      <tr>
+        <td>2020 - 2022</td>
+        <td>HSC</td>
+        <td>Sri Aravindar Hr Sec School</td>
+      </tr>
+    </table>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact">
+    <h2>Contact Me</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea rows="4" placeholder="Your Message" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Salamon | Portfolio Website</p>
+    <p>
+      <a href="https://github.com/" target="_blank">GitHub</a> | 
+      <a href="https://linkedin.com/" target="_blank">LinkedIn</a>
+    </p>
+  </footer>
+
+</body>
+</html>
