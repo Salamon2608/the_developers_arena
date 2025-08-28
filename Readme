@@ -1,0 +1,30 @@
+# 🌐 Personal Portfolio Website
+
+This is my **personal portfolio website**, built using **HTML & CSS**.  
+It showcases my skills, education, and a contact form.  
+
+---
+
+## 🚀 Features
+- 🖼️ Clean and responsive layout  
+- 🎨 Modern design with Google Fonts & hover effects  
+- 💡 Sections: About Me, Skills, Education, Contact  
+- 📬 Contact form (basic HTML structure)  
+- 🔗 Social links in footer  
+
+---
+
+## 🛠️ Technologies Used
+- HTML5  
+- CSS3  
+- Google Fonts  
+
+---
+
+## 📸 Preview
+![Portfolio Preview](screenshot.png)  
+*(Add a screenshot of your site and save it as `screenshot.png` in the repo)*
+
+---
+
+## 📂 Project Structure
