@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Registration Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f6f9;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .form-container {
+      background: #fff;
+      padding: 20px 30px;
+      border-radius: 10px;
+      box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+      width: 320px;
+    }
+    .form-container h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #333;
+    }
+    .form-container input {
+      width: 100%;
+      padding: 10px;
+      margin: 6px 0;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      outline: none;
+      transition: 0.3s;
+    }
+    .form-container button {
+      width: 100%;
+      padding: 10px;
+      background: #007BFF;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+    .form-container button:hover {
+      background: #0056b3;
+    }
+    .error {
+      color: red;
+      font-size: 0.85em;
+      margin: 0 0 8px 2px;
+    }
+    /* Highlight Styles */
+    .valid {
+      border: 2px solid green;
+    }
+    .invalid {
+      border: 2px solid red;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="form-container">
+    <h2>Register</h2>
+    <form id="regForm">
+      <input type="text" id="name" placeholder="Enter Name">
+      <p id="nameError" class="error"></p>
+
+      <input type="email" id="email" placeholder="Enter Email">
+      <p id="emailError" class="error"></p>
+
+      <input type="password" id="password" placeholder="Enter Password">
+      <p id="passError" class="error"></p>
+
+      <input type="password" id="confirmPassword" placeholder="Confirm Password">
+      <p id="confirmError" class="error"></p>
+
+      <button type="submit">Register</button>
+    </form>
+  </div>
+
+  <script>
+    // Email Validation Regex
+    function validateEmail(email) {
+      let pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      return pattern.test(email);
+    }
+
+    // Get fields & errors
+    const nameField = document.getElementById("name");
+    const emailField = document.getElementById("email");
+    const passwordField = document.getElementById("password");
+    const confirmPasswordField = document.getElementById("confirmPassword");
+
+    const nameError = document.getElementById("nameError");
+    const emailError = document.getElementById("emailError");
+    const passError = document.getElementById("passError");
+    const confirmError = document.getElementById("confirmError");
+
+    // Utility function for highlight
+    function setStatus(field, errorElement, message) {
+      if(message) {
+        errorElement.textContent = message;
+        field.classList.remove("valid");
+        field.classList.add("invalid");
+      } else {
+        errorElement.textContent = "";
+        field.classList.remove("invalid");
+        field.classList.add("valid");
+      }
+    }
+
+    // Live validation events
+    nameField.addEventListener("input", () => {
+      setStatus(nameField, nameError, nameField.value.trim() === "" ? "Name is required" : "");
+    });
+
+    emailField.addEventListener("input", () => {
+      if(emailField.value.trim() === "") {
+        setStatus(emailField, emailError, "Email is required");
+      } else if(!validateEmail(emailField.value.trim())) {
+        setStatus(emailField, emailError, "Invalid email format");
+      } else {
+        setStatus(emailField, emailError, "");
+      }
+    });
+
+    passwordField.addEventListener("input", () => {
+      setStatus(passwordField, passError, passwordField.value.length < 6 
+        ? "Password must be at least 6 characters" 
+        : "");
+    });
+
+    confirmPasswordField.addEventListener("input", () => {
+      setStatus(confirmPasswordField, confirmError, 
+        passwordField.value !== confirmPasswordField.value 
+        ? "Passwords do not match" 
+        : "");
+    });
+
+    // Final check on submit
+    document.getElementById("regForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+
+      if(!nameError.textContent && !emailError.textContent && 
+         !passError.textContent && !confirmError.textContent &&
+         nameField.value && emailField.value && passwordField.value && confirmPasswordField.value) {
+        alert("🎉 Registration Successful!");
+        this.reset();
+        [nameField, emailField, passwordField, confirmPasswordField].forEach(f => f.classList.remove("valid"));
+      } else {
+        alert("⚠ Please fix the errors before submitting.");
+      }
+    });
+  </script>
+
+</body>
+</html>
