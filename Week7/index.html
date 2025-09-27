@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+  <!-- Navbar -->
+  <nav class="bg-white shadow-md fixed top-0 left-0 w-full z-10">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+      <h1 class="text-2xl font-bold text-blue-600">MyPortfolio</h1>
+      <div class="space-x-6 hidden md:flex">
+        <a href="#home" class="hover:text-blue-600">Home</a>
+        <a href="#about" class="hover:text-blue-600">About</a>
+        <a href="#projects" class="hover:text-blue-600">Projects</a>
+        <a href="#contact" class="hover:text-blue-600">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="h-screen flex items-center justify-center bg-gradient-to-r from-blue-500 to-indigo-600 text-white">
+    <div class="text-center px-6">
+      <h2 class="text-4xl md:text-6xl font-bold mb-4">Hi, I'm Salamon 👋</h2>
+      <p class="text-lg md:text-xl mb-6">A Full Stack Web Developer & MCA Student</p>
+      <a href="#projects" class="px-6 py-3 bg-white text-blue-600 rounded-lg font-medium hover:bg-gray-200">View My Work</a>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-20 bg-gray-50">
+    <div class="max-w-5xl mx-auto px-6">
+      <h2 class="text-3xl font-bold text-center mb-10">About Me</h2>
+      <p class="text-center text-gray-700 leading-relaxed max-w-3xl mx-auto">
+        I'm a passionate developer currently pursuing MCA at Sri Manakula Vinayaga Engineering College. 
+        I enjoy building web applications, learning new frameworks, and exploring cybersecurity.
+      </p>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="py-20 bg-white">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-3xl font-bold text-center mb-10">Projects</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+        <!-- Project Card 1 -->
+        <div class="bg-gray-50 rounded-2xl shadow-lg p-6">
+          <img src="https://via.placeholder.com/400x200" alt="Project 1" class="rounded-lg mb-4">
+          <h3 class="text-xl font-semibold mb-2">Hospital Management Chatbot</h3>
+          <p class="text-gray-600 mb-4">A chatbot system built with PHP for hospital management system.</p>
+          <a href="#" class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">View Project</a>
+        </div>
+
+        <!-- Project Card 2 -->
+        <div class="bg-gray-50 rounded-2xl shadow-lg p-6">
+          <img src="https://via.placeholder.com/400x200" alt="Project 2" class="rounded-lg mb-4">
+          <h3 class="text-xl font-semibold mb-2">Sales Prediction App</h3>
+          <p class="text-gray-600 mb-4">A machine learning app to predict sales based on advertising budgets.</p>
+          <a href="#" class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">View Project</a>
+        </div>
+
+        <!-- Project Card 3 -->
+        <div class="bg-gray-50 rounded-2xl shadow-lg p-6">
+          <img src="https://via.placeholder.com/400x200" alt="Project 3" class="rounded-lg mb-4">
+          <h3 class="text-xl font-semibold mb-2">Portfolio Website</h3>
+          <p class="text-gray-600 mb-4">A personal portfolio site showcasing my projects and skills.</p>
+          <a href="#" class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">View Project</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-20 bg-gray-50">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+      <h2 class="text-3xl font-bold mb-6">Get In Touch</h2>
+      <p class="text-gray-600 mb-8">I'd love to connect! Feel free to reach out for collaborations or just a friendly chat.</p>
+      <form class="max-w-xl mx-auto space-y-4">
+        <input type="text" placeholder="Your Name" class="w-full p-3 border rounded-lg">
+        <input type="email" placeholder="Your Email" class="w-full p-3 border rounded-lg">
+        <textarea placeholder="Your Message" class="w-full p-3 border rounded-lg h-32"></textarea>
+        <button class="w-full px-4 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-white py-6 text-center shadow-inner">
+    <p class="text-gray-600">© 2025 Salamon. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
